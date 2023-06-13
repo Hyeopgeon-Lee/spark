@@ -35,7 +35,6 @@ object ExamMariaDBSelect {
 
     df.select("NAME").show();
 
-
   }
 
 }
