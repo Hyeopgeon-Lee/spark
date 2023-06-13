@@ -17,6 +17,8 @@ object LineCount {
 
     println("전체 라인 수 : " + txt.count)
 
+    spark.stop()
   }
 
 }
+

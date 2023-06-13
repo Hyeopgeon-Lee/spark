@@ -28,6 +28,8 @@ object WordCount {
 
     println("Total words: " + result.count()); // 결과 단어수 출력
 
-  }
+    spark.stop()
 
+  }
 }
+

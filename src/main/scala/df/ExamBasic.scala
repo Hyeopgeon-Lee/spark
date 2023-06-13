@@ -10,9 +10,6 @@ object ExamBasic {
 
   def doExam(spark: SparkSession, df: DataFrame): Unit = {
 
-    df.printSchema() // 데이터 구조 보여주기
-    df.show(false) // 전체 데이터 보여주기
-
     // 저장된 데이터 수 확인하기
     println("저장된 데이터 수 : " + df.count())
 

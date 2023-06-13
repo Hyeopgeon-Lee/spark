@@ -40,16 +40,18 @@ object RunMain {
     // 데이터 프레임에 데이터 구조 정의 및 데이터 저장하기
     val df = spark.createDataFrame(spark.sparkContext.parallelize(data), dataSchema)
 
-    //    // 데이터 프레임 기초 실습
-    //    ExamBasic.doExam(spark, df)
-    //
-    //    // 데이터 프레임 SQL 실습
-    //    ExamSQL.doExam(spark, df)
+    df.printSchema() // 데이터 프레임 구조 보기
 
-    // 데이터 프레임 MariaDB Insert SQL 실습
-    ExamMariaDBInsert.doExam(df)
+    df.show() // 데이터 프레임에 저장된 데이터 보기
+
+    //    ExamBasic.doExam(spark, df) // 데이터 프레임 기초 실습 진행
+
+    //    ExamSQL.doExam(spark, df) // SparkSQL 실습
+
+    //    ExamMariaDBInsert.doExam(df) // MariaDB Insert 예제
 
     // Spark 종료
     spark.stop()
   }
 }
+
